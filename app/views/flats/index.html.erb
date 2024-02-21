@@ -1,0 +1,16 @@
+<h1>Show me all</h1>
+
+<div class="container">
+  <div class="row">
+    <% @flats.each do |flat| %>
+    <div class="col-4">
+    <img src="https://source.unsplash.com/random/architecture-interior" width=250px height=250px>
+    <h3><%= flat.name %></h3>
+    <p><%= flat.address %></p>
+    <i class="fa-solid fa-users"><%= flat.number_of_guests %></i>
+    <i class="fa-solid fa-tag"><%= flat.price_per_night %></i>
+    <%= link_to "More info", flat_path(flat) %>
+    </div>
+  <% end %>
+  </div>
+</div>
